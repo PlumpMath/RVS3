@@ -1,0 +1,26 @@
+<ResourceDictionary
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/PanelBar.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/TileView.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/TabControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/ToolBar.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/Menu.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/Window.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/Themes/Windows7/TreeView.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/OutlookBar.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Book.xaml" />
+		
+        
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/CarouselDataFieldPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/CarouselDataRecordPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/CarouselItem.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/CarouselItemContentPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/CarouselItemsControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/RadCarousel.xaml" />
+        
+	</ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

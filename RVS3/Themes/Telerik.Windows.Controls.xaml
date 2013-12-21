@@ -1,0 +1,25 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Label.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/GroupBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/RangeControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/PickerTextBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/PickerToggleButton.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/DragDrop.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Expander.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/ProgressBar.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/LayoutTransformControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Slider.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Button.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/ButtonChrome.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/ShadowChrome.xaml" />
+        
+        <ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/TransitionControl.xaml" />
+        
+        
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/BusyIndicator.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/WatermarkTextBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/StringFilterEditor.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

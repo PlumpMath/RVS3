@@ -1,0 +1,411 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    
+                            xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+
+                            xmlns:external="clr-namespace:Telerik.Windows.Controls.External"
+                            xmlns:telerikControlsRTBUIStatusBar="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.StatusBar;assembly=Telerik.Windows.Controls.RichTextBoxUI,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:telerikControlsRTBUI="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI;assembly=Telerik.Windows.Controls.RichTextBoxUI,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:telerikControlsRTBUIRuler="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Ruler;assembly=Telerik.Windows.Controls.RichTextBoxUI,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:telerikDialogs="clr-namespace:Telerik.Windows.Controls.RichTextBoxUI.Dialogs;assembly=Telerik.Windows.Controls.RichTextBoxUI,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+
+
+
+>
+
+    <SolidColorBrush x:Key="HorizontalPageThumbStyle_RectangleFill" Color="Transparent"/>
+<SolidColorBrush x:Key="VerticalPageThumbStyle_RectangleFill" Color="Transparent"/>
+<SolidColorBrush x:Key="ThumbOuterStroke" Color="#FF869EBB" />
+<SolidColorBrush x:Key="ThumbInnerStroke" Color="#FFFFFFFF" />
+<LinearGradientBrush x:Key="ThumbFill" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFDDE9F7" Offset="1"/>
+        <GradientStop Color="#FFFDFEFF"/>
+        <GradientStop Color="#FFDCE6F4" Offset="0.51"/>
+        <GradientStop Color="#FFE6F0FA" Offset="0.5"/>
+    </LinearGradientBrush>
+<SolidColorBrush x:Key="ColumnResizeThumbStyle_GridBackground" Color="#FFDDE9F7"/>
+<SolidColorBrush x:Key="ColumnResizeThumbStyle_GridBorderBrush" Color="#FFDDE9F7"/>
+<SolidColorBrush x:Key="ColumnResizeThumbStyle_GridLinesFill" Color="#FFFFFFFF" />
+<SolidColorBrush x:Key="ColumnResizeThumbStyle_GridLinesStroke" Color="#FF7DA2CE" />
+<SolidColorBrush x:Key="RowResizeThumbStyle_GridBackground" Color="#FFDDE9F7"/>
+<Color x:Key="RulerMarkersColor">#FF000000</Color>
+<SolidColorBrush x:Key="Row0Rectangle_Fill" Color="#FFE2F0FD"/>
+<LinearGradientBrush x:Key="BackgrounBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE2F0FD" Offset="0"/>
+        <GradientStop Color="#FFDCE5F2" Offset="1"/>
+        <GradientStop Color="#FFCED7E6" Offset="0.5"/>
+    </LinearGradientBrush>
+<SolidColorBrush x:Key="Row0Column1_Background" Color="#FFE2F0FD"/>
+<SolidColorBrush x:Key="HorizontalRulerBackground_Fill" Color="White"/>
+<SolidColorBrush x:Key="HorizontalRulerBackground_Stroke" Color="Transparent"/>
+<SolidColorBrush x:Key="LeftPageMarginBackground_Fill" Color="#FFE2F0FD"/>
+<SolidColorBrush x:Key="LeftPageMarginBackground_Stroke" Color="#FFA0AFC3"/>
+<SolidColorBrush x:Key="RightPagrMarginBackground_Fill" Color="#FFE2F0FD"/>
+<SolidColorBrush x:Key="RightPagrMarginBackground_Stroke" Color="#FFA0AFC3"/>
+<SolidColorBrush x:Key="LeftSectionMarginThumb_Background" Color="Red"/>
+<SolidColorBrush x:Key="RightSectionMarginThumb_Background" Color="Red"/>
+<SolidColorBrush x:Key="ThumbMarkerOuterStroke" Color="#FFC0CBD9" />
+<LinearGradientBrush x:Key="ThumbMarkerInnerStroke" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFAFAFB" Offset="0"/>
+        <GradientStop Color="#FFF0F0F0" Offset="1"/>
+    </LinearGradientBrush>
+<LinearGradientBrush x:Key="ThumbMarkerFill" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFDDE9F7" Offset="1"/>
+        <GradientStop Color="#FFFDFEFF"/>
+        <GradientStop Color="#FFDCE6F4" Offset="0.51"/>
+        <GradientStop Color="#FFE6F0FA" Offset="0.5"/>
+    </LinearGradientBrush>
+<SolidColorBrush x:Key="LeftParagraphIndentThumb_Background" Color="Red"/>
+<SolidColorBrush x:Key="RightParagraphIndentThumb_Background" Color="Red"/>
+<SolidColorBrush x:Key="VerticalRulerBackground_Fill" Color="White"/>
+<SolidColorBrush x:Key="VerticalRulerBackground_Stroke" Color="Transparent"/>
+<SolidColorBrush x:Key="TopPageMarginBackground_Fill" Color="#FFE2F0FD"/>
+<SolidColorBrush x:Key="TopPageMarginBackground_Stroke" Color="#FFA0AFC3"/>
+<SolidColorBrush x:Key="BottomPageMarginBackground_Fill" Color="#FFE2F0FD"/>
+<SolidColorBrush x:Key="BottomPageMarginBackground_Stroke" Color="#FFA0AFC3"/>
+<SolidColorBrush x:Key="TopSectionMarginThumb_Background" Color="Red"/>
+<SolidColorBrush x:Key="BottomSectionMarginThumb_Background" Color="Red"/>
+<SolidColorBrush x:Key="TopLeftCornerRectangle_Fill" Color="#FFE2F0FD"/>
+<SolidColorBrush x:Key="TopLeftCornerRectangle_Stroke" Color="#FFA0AFC3"/>
+<SolidColorBrush x:Key="MarkLine_Stroke" Color="Black"/>
+
+    
+    
+    <telerikControlsRTBUIRuler:InvertedBooleanConverter x:Key="InvertedBooleanConverter"/>
+    
+    <Style TargetType="Thumb" x:Key="HorizontalPageThumbStyle">
+        <Setter Property="Cursor" Value="SizeWE" />
+        <Setter Property="Margin" Value="-8 0 0 0" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="Height" Value="24" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                        <Rectangle Fill="{StaticResource HorizontalPageThumbStyle_RectangleFill}" Width="16" Height="24" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Thumb" x:Key="VerticalPageThumbStyle">
+        <Setter Property="Cursor" Value="SizeNS" />
+        <Setter Property="Margin" Value="0 -8 0 0" />
+        <Setter Property="Width" Value="24" />
+        <Setter Property="Height" Value="16" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Rectangle Fill="{StaticResource VerticalPageThumbStyle_RectangleFill}" Width="24" Height="16" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="Thumb" x:Key="ParagraphIndentThumbStyle">
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="Margin" Value="-4 12 0 0"  />
+        <Setter Property="Width" Value="9" />
+        <Setter Property="Height" Value="8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Thumb">
+                    <Grid>
+                        <Path Stretch="Fill" Stroke="{StaticResource ThumbOuterStroke}" Data="M0.5,6.617877 L8.25,6.617877 L8.25,9.5637255 L4.375,12.625 L0.5,9.5637255 z" 
+                  RenderTransformOrigin="0.5,0.5" Margin="0,-9.95,0,0" Height="8" VerticalAlignment="Top">
+                            
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform Y="9"/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                            
+                            
+
+                        </Path>
+                        <Path Stretch="Fill" Stroke="{StaticResource ThumbInnerStroke}"
+                              Fill="{StaticResource ThumbFill}"
+			  Margin="0.99,-9.155,1.01,0" Data="M0.57810314,8.9935842 L8.3281031,8.9935842 8.3281031,10.920197 4.4531031,12.965892 0.57810314,10.920197 z" 
+                              RenderTransformOrigin="0.5,0.5" Height="5.7" VerticalAlignment="Top">
+                            
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="180"/>
+                                    <TranslateTransform Y="9"/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                            
+                            
+                        </Path>
+                    </Grid>                  
+                   
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- RichTextBoxRuler -->
+
+    <Style TargetType="telerikControlsRTBUI:DocumentRuler" 
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikControlsRTBUI:DocumentRuler}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikControlsRTBUI:DocumentRuler">
+                    <Grid x:Name="LayoutRoot">
+                        <Grid.Resources>
+                            <Style TargetType="Thumb" x:Key="ColumnResizeThumbStyle">
+                                <Setter Property="Cursor" Value="SizeWE" />
+                                <Setter Property="Margin" Value="-7 5 0 0"  />
+                                <Setter Property="Width" Value="16" />
+                                <Setter Property="Height" Value="14" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Thumb">
+                                            <Border Background="{StaticResource ColumnResizeThumbStyle_GridBackground}" BorderBrush="{StaticResource ColumnResizeThumbStyle_GridBorderBrush}"
+                                                    BorderThickness="1">
+                                                <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                    <Border Background="{StaticResource ColumnResizeThumbStyle_GridLinesFill}" SnapsToDevicePixels="True" 
+                                                        />
+                                                    
+                                                    <Border Height="1" Margin="0,1,0,0" VerticalAlignment="Top" 
+                                                            Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                            
+                                                             />
+                                                        
+                                                    <Border Height="1" Margin="0,3,0,0" VerticalAlignment="Top" 
+                                                            Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                                
+                                                                 />
+                                                    <Border Height="1" Margin="0,5,0,0" VerticalAlignment="Top" 
+                                                            Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                                    
+                                                                     />
+                                                        
+                                                    <Border Height="1" Margin="0,7,0,0" VerticalAlignment="Top" 
+                                                            Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                                        
+                                                                         />
+
+                                                    <Border HorizontalAlignment="Left" Margin="1,0,0,0" Width="1" 
+                                                            Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                                            
+                                                                             />
+                                                        
+                                                    <Border HorizontalAlignment="Left" Margin="3,0,0,0" Width="1" 
+                                                                                    Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                                                
+                                                                                 />
+                                                                                
+                                                    <Border HorizontalAlignment="Left" Margin="5,0,0,0" Width="1" 
+                                                                                        Background="{StaticResource ColumnResizeThumbStyle_GridLinesStroke}" SnapsToDevicePixels="True"
+                                                                                    
+                                                                                     />
+                                                </Grid>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+
+                            <Style TargetType="Thumb" x:Key="RowResizeThumbStyle">
+                                <Setter Property="Cursor" Value="SizeNS" />
+                                <Setter Property="Margin" Value="3 -5 0 0" />
+                                <Setter Property="Width" Value="18" />
+                                <Setter Property="Height" Value="10" />
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="Thumb">
+                                            <Grid Width="12" Height="18" Background="{StaticResource RowResizeThumbStyle_GridBackground}" />
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+
+                            <SolidColorBrush x:Key="RulerMarkersBrush" Color="{StaticResource RulerMarkersColor}" />
+
+                        </Grid.Resources>
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="24"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Horizontal Ruler-->
+                        <Rectangle Grid.RowSpan="1" Grid.ColumnSpan="2" Fill="{StaticResource Row0Rectangle_Fill}" />
+                        <Rectangle Grid.RowSpan="2" Fill="{StaticResource BackgrounBrush}"/>
+
+                        <!-- Background for when the vertical ruler is collapsed-->
+                        <Canvas Grid.Column="1" HorizontalAlignment="Stretch" Background="{StaticResource Row0Column1_Background}"/>
+
+                        <Canvas Grid.Column="1" x:Name="HorizontalRuler" HorizontalAlignment="Stretch">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform x:Name="HorizontalRulerTranslate" X="0" Y="0" />
+                            </Canvas.RenderTransform>
+                            <Canvas x:Name="HorizontalBackGroundContainer" HorizontalAlignment="Stretch">
+                                
+                                <Rectangle x:Name="HorizontalRulerBackground" Height="14" StrokeThickness="1" Canvas.Top="5" 
+                                           Fill="{StaticResource HorizontalRulerBackground_Fill}" Stroke="{StaticResource HorizontalRulerBackground_Stroke}"/>
+                                <Rectangle x:Name="LeftPageMarginBackground" Height="14" StrokeThickness="1" Canvas.Top="5" 
+                                           Fill="{StaticResource LeftPageMarginBackground_Fill}" Stroke="{StaticResource LeftPageMarginBackground_Stroke}"/>
+                                <Rectangle x:Name="RightPagrMarginBackground" Height="14" StrokeThickness="1" Canvas.Top="5" 
+                                           Fill="{StaticResource RightPagrMarginBackground_Fill}" Stroke="{StaticResource RightPagrMarginBackground_Stroke}"/>
+                            </Canvas>
+
+                            <Canvas x:Name="HorizontalMarksContainer" HorizontalAlignment="Stretch"></Canvas>
+
+                            <Canvas x:Name="HorizontalSectionThumbContainer" HorizontalAlignment="Stretch">
+                                <Thumb x:Name="LeftSectionMarginThumb" Background="{StaticResource LeftSectionMarginThumb_Background}"
+                   IsHitTestVisible="{Binding Converter={StaticResource InvertedBooleanConverter}, Path=IsReadOnly}"
+                   Style="{StaticResource HorizontalPageThumbStyle}" />
+
+                                <Thumb x:Name="RightSectionMarginThumb" Background="{StaticResource RightSectionMarginThumb_Background}" 
+                   IsHitTestVisible="{Binding Converter={StaticResource InvertedBooleanConverter}, Path=IsReadOnly}"                       
+                   Style="{StaticResource HorizontalPageThumbStyle}"/>
+                            </Canvas>
+
+                            <Canvas x:Name="HorizontalColumnResizeThumbsContainer" HorizontalAlignment="Stretch" />
+
+                            <Canvas x:Name="HorizontalParagraphThumbContainer" HorizontalAlignment="Stretch">
+
+                                <Grid x:Name="LeftParagraphIndentMarker" Width="9" Height="8" Margin="-4 12 0 0">
+                                    <Path Stretch="Fill" Stroke="{StaticResource ThumbMarkerOuterStroke}" 
+                                          Data="M0.5,6.617877 L8.25,6.617877 L8.25,9.5637255 L4.375,12.625 L0.5,9.5637255 z" 
+                  RenderTransformOrigin="0.5,0.5" Margin="0,-9.95,0,0" Height="8" VerticalAlignment="Top">
+                                        
+                                        <Path.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="180"/>
+                                                <TranslateTransform Y="9"/>
+                                            </TransformGroup>
+                                        </Path.RenderTransform>
+                                        
+                                        
+
+                                    </Path>
+                                    <Path Stretch="Fill" Stroke="{StaticResource ThumbMarkerInnerStroke}"
+                                          Fill="{StaticResource ThumbMarkerFill}"
+			  Margin="0.99,-9.155,1.01,0" Data="M0.57810314,8.9935842 L8.3281031,8.9935842 8.3281031,10.920197 4.4531031,12.965892 0.57810314,10.920197 z"  
+                                          RenderTransformOrigin="0.5,0.5" Height="5.7" VerticalAlignment="Top">
+                                        
+                                        <Path.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="180"/>
+                                                <TranslateTransform Y="9"/>
+                                            </TransformGroup>
+                                        </Path.RenderTransform>
+                                        
+                                        
+                                    </Path>
+                                </Grid>
+                                <Grid x:Name="RightParagraphIndentMarker" Width="9" Height="8" Margin="-4 12 0 0">
+                                    <Path Stretch="Fill" Stroke="{StaticResource ThumbMarkerOuterStroke}" 
+                                          Data="M0.5,6.617877 L8.25,6.617877 L8.25,9.5637255 L4.375,12.625 L0.5,9.5637255 z" 
+                                          RenderTransformOrigin="0.5,0.5" Margin="0,-9.95,0,0" Height="8" VerticalAlignment="Top">
+                                        
+                                        <Path.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="180"/>
+                                                <TranslateTransform Y="9"/>
+                                            </TransformGroup>
+                                        </Path.RenderTransform>
+                                        
+                                        
+
+                                    </Path>
+                                    <Path Stretch="Fill" Stroke="{StaticResource ThumbMarkerInnerStroke}"
+                                          Fill="{StaticResource ThumbMarkerFill}"
+			  Margin="0.99,-9.155,1.01,0" Data="M0.57810314,8.9935842 L8.3281031,8.9935842 8.3281031,10.920197 4.4531031,12.965892 0.57810314,10.920197 z"  RenderTransformOrigin="0.5,0.5" Height="5.7" VerticalAlignment="Top">
+                                        
+                                        <Path.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="180"/>
+                                                <TranslateTransform Y="9"/>
+                                            </TransformGroup>
+                                        </Path.RenderTransform>
+                                        
+                                        
+                                    </Path>
+                                </Grid>
+
+                                <Thumb x:Name="LeftParagraphIndentThumb" Background="{StaticResource LeftParagraphIndentThumb_Background}" 
+                   IsHitTestVisible="{Binding Converter={StaticResource InvertedBooleanConverter}, Path=IsReadOnly}"
+                   Style="{StaticResource ParagraphIndentThumbStyle}" />
+
+                                <Thumb x:Name="RightParagraphIndentThumb" Background="{StaticResource RightParagraphIndentThumb_Background}" 
+                   IsHitTestVisible="{Binding Converter={StaticResource InvertedBooleanConverter}, Path=IsReadOnly}"
+                   Style="{StaticResource ParagraphIndentThumbStyle}" />
+                            </Canvas>
+                        </Canvas>
+
+
+                        <!-- Background for when the vertical ruler is collapsed-->
+                        <Rectangle Grid.RowSpan="2" Fill="{StaticResource BackgrounBrush}"/>
+
+                        <!-- Vertical Ruler-->
+
+                        <Canvas Grid.Row="1" x:Name="VerticalRuler" VerticalAlignment="Stretch">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform x:Name="VerticalRulerTranslate" X="0" Y="0" />
+                            </Canvas.RenderTransform>
+                            <Canvas Grid.Row="1" x:Name="VerticalBackGroundContainer" VerticalAlignment="Stretch">
+                                <Rectangle x:Name="VerticalRulerBackground" Width="14" StrokeThickness="1" Canvas.Left="5" 
+                                           Fill="{StaticResource VerticalRulerBackground_Fill}" 
+                                           Stroke="{StaticResource VerticalRulerBackground_Stroke}"/>
+                                
+                                <Rectangle x:Name="TopPageMarginBackground" Width="14" StrokeThickness="1" Canvas.Left="5" 
+                                           Fill="{StaticResource TopPageMarginBackground_Fill}" 
+                                           Stroke="{StaticResource TopPageMarginBackground_Stroke}"/>
+                                
+                                <Rectangle x:Name="BottomPageMarginBackground" Width="14" StrokeThickness="1" Canvas.Left="5" 
+                                           Fill="{StaticResource BottomPageMarginBackground_Fill}" 
+                                           Stroke="{StaticResource BottomPageMarginBackground_Stroke}"/>
+                            </Canvas>
+
+                            <Canvas Grid.Row="1" x:Name="VerticalMarksContainer" VerticalAlignment="Stretch"/>
+
+                            <Canvas Grid.Row="1" x:Name="VerticalThumbContainer" VerticalAlignment="Stretch">
+                                <Thumb x:Name="TopSectionMarginThumb" Background="{StaticResource TopSectionMarginThumb_Background}" 
+                                           IsHitTestVisible="{Binding Converter={StaticResource InvertedBooleanConverter}, Path=IsReadOnly}"
+                                           Style="{StaticResource VerticalPageThumbStyle}" />
+                                <Thumb x:Name="BottomSectionMarginThumb" Background="{StaticResource BottomSectionMarginThumb_Background}" 
+                                       IsHitTestVisible="{Binding Converter={StaticResource InvertedBooleanConverter}, Path=IsReadOnly}"
+                                       Style="{StaticResource VerticalPageThumbStyle}" />
+                                
+                            </Canvas>
+
+                            <Canvas x:Name="VerticalRowResizeThumbsContainer" VerticalAlignment="Stretch" />
+
+                        </Canvas>
+
+                        <Rectangle Fill="{StaticResource TopLeftCornerRectangle_Fill}" x:Name="cornerRect" Stroke="{StaticResource TopLeftCornerRectangle_Stroke}" StrokeThickness="1" />
+                        <Line x:Name="MarkLine" Grid.Row="1" Grid.Column="1" Stroke="{StaticResource MarkLine_Stroke}" StrokeThickness="1" StrokeDashArray="1 1 1 1 1 3" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- End RichTextBoxRuler -->
+
+    
+</ResourceDictionary>

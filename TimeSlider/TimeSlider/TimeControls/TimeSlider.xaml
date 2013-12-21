@@ -1,0 +1,26 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:RobControls"
+	mc:Ignorable="d"
+	x:Class="RobControls.TimeSlider"
+	x:Name="BKS"
+	d:DesignWidth="720" d:DesignHeight="54">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="BKSliderStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <local:BKSlider Height="33" x:Name="BKSub" Width="Auto" Bookmarks="{Binding ElementName=BKS, Path=bookmarks, Mode=OneWay}" Value="{Binding ElementName=BKS, Path=currentTime}" VerticalAlignment="Top" TickPlacement="BottomRight" Style="{DynamicResource BKSliderStyle}" TickFrequency="5" ValueChanged="BKSlider_ValueChanged" OnDeleteBookmark="BKSub_OnDeleteBookmark">
+            <local:BKSlider.Maximum>
+                <Binding ElementName="BKS" Path="length" Mode="OneWay"/>
+            </local:BKSlider.Maximum>
+        </local:BKSlider>		
+	</Grid>
+</UserControl>

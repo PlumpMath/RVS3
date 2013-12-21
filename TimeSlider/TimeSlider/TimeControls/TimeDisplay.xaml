@@ -1,0 +1,23 @@
+﻿<UserControl 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RobControls"
+             mc:Ignorable="d"
+            x:Class="RobControls.TimeDisplay"
+            x:Name="TD"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid x:Name="TimeHolder" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="24" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Right" Text="{Binding ElementName=TD, Path=currentTime, Converter={local:DoubleToDurationStrConverter}}" Background="{x:Null}" Margin="0,0,2,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="13.333" FontWeight="ExtraBlack" Foreground="#FF0F1114" />
+        <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="/" Background="{x:Null}" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="13.333" FontWeight="ExtraBlack" Foreground="#FF0F1114" />
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Text="{Binding ElementName=TD, Path=length, Converter={local:DoubleToDurationStrConverter}}" Background="{x:Null}" Margin="2,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="13.333" FontWeight="ExtraBlack" Foreground="#FF0F1114" />
+        <Image Grid.Column="3" Source="clock.png" Width="16" Height="16" Margin="3,0,0,2"/>
+    </Grid>
+</UserControl>

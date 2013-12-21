@@ -1,0 +1,569 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		
+                            xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+
+                            xmlns:external="clr-namespace:Telerik.Windows.Controls.External"
+                            xmlns:telerikControls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Documents,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:telerikUI="clr-namespace:Telerik.Windows.Documents.UI;assembly=Telerik.Windows.Documents,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:telerikUIAnotations="clr-namespace:Telerik.Windows.Documents.UI.Annotations;assembly=Telerik.Windows.Documents,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:view="clr-namespace:Telerik.Windows.Documents.ItemsControlPresentation;assembly=Telerik.Windows.Documents,Version=2011.2.0712.35,Culture=neutral,PublicKeyToken=5803cfa389c90ce7"
+                            xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+
+>
+
+    <external:Windows7ThemeExternal x:Key="Theme" />
+<SolidColorBrush x:Key="RichTextBoxBorderBrush" Color="#FFA0AFC3" />
+<SolidColorBrush x:Key="RichTextBoxSelectionStroke" Color="#601B81E7"/>
+<SolidColorBrush x:Key="RichTextBoxSelectionFill" Color="#604BB1FF"/>
+<SolidColorBrush x:Key="MouseOverBorderBorderBrush_MouseNotOver" Color="Transparent"/>
+<SolidColorBrush x:Key="BorderBetweenScrollBarsBackground" Color="#F5F5F5" />
+<SolidColorBrush x:Key="PrintingScreenGridBackground" Color="White"/>
+<SolidColorBrush x:Key="DisabledVisualElementBorderBackground" Color="#A5F7F7F7"/>
+<SolidColorBrush x:Key="DisabledVisualElementBorderBorderBrush" Color="#A5F7F7F7"/>
+<SolidColorBrush x:Key="FocusVisualElementBorderBorderBrush" Color="#FF6DBDD1"/>
+<SolidColorBrush x:Key="ValidationErrorElementBorderBorderBrush" Color="#FFDB000C"/>
+<Color x:Key="MouseOverBorderBorderBrush_MouseOver">#FF99C1E2</Color>
+<SolidColorBrush x:Key="GridBorderBorderbrush" Color="#646464"/>
+<SolidColorBrush x:Key="GridBorderBackground" Color="Black"/>
+<DropShadowEffect x:Key="DropShadowEffect" BlurRadius="10" ShadowDepth="0" Opacity="0.4"/>
+<SolidColorBrush x:Key="PageContentPresenterBackground" Color="White"/>
+<LinearGradientBrush x:Key="RichTextBoxBackground" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFE2F0FD" Offset="0"/>
+        <GradientStop Color="#FFDCE5F2" Offset="1"/>
+        <GradientStop Color="#FFCED7E6" Offset="0.5"/>
+    </LinearGradientBrush>
+<SolidColorBrush x:Key="DropPositionMarkerControlTemplateRectangleFill" Color="Black"/>
+<SolidColorBrush x:Key="CommentBalloonBorderBrush" Color="Red"/>
+<SolidColorBrush x:Key="CommentBalloonBackground" Color="Pink"/>
+<SolidColorBrush x:Key="CommentPane_BorderBrush" Color="#FFDFDFDF"/>
+<SolidColorBrush x:Key="CommentPane_Background" Color="#FFF4F4F4"/>
+<Color x:Key="CommentPane_Background_MouseOver">#FFE9E9E9</Color>
+<Color x:Key="CommentPane_BorderBrush_MouseOver">#FFBFBFBF</Color>
+
+    
+    <!--Caret-->
+    <Style TargetType="telerikUI:Caret"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:Caret}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:Caret">
+                    <Grid x:Name="RootElement">
+                        <ScrollViewer telerik:StyleManager.Theme="{StaticResource Theme}"
+                            
+                            x:Name="PART_ContentHost"
+                            
+                            
+                            BorderThickness="0" Padding="0" />
+                            <Rectangle x:Name="Rectangle" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="AcceptsReturn" Value="True" />
+        
+        
+        <Setter Property="Padding" Value="-3 0 0 0" />
+        
+        <Setter Property="Foreground" Value="Transparent" />
+    </Style>
+    <!--End Caret-->
+
+    <!-- RadRichTextBox-->
+    <Style TargetType="telerikControls:RadRichTextBox"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikControls:RadRichTextBox}"
+        
+        >
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="BorderBrush" Value="{StaticResource RichTextBoxBorderBrush}" />
+        <Setter Property="Background" Value="#FFFFFFFF" />
+        <Setter Property="SelectionStroke" Value="{StaticResource RichTextBoxSelectionStroke}" />
+        <Setter Property="SelectionFill" Value="{StaticResource RichTextBoxSelectionFill}" />
+        <Setter Property="MouseOverBorderThickness" Value="1" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikControls:RadRichTextBox">
+                    <Grid x:Name="LayoutRoot">
+                        
+                        <Canvas Width="0" Height="0" Name="MeasuringPanel" />
+
+                        <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" Opacity="1"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}">
+
+                            <Border x:Name="MouseOverBorder" BorderThickness="{TemplateBinding MouseOverBorderThickness}" BorderBrush="{StaticResource MouseOverBorderBorderBrush_MouseNotOver}" Margin="-1">
+                                <Grid Background="{TemplateBinding Background}">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <ContentControl x:Name="ViewPresenter" IsTabStop="False" 
+                                                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+
+                                    <Border Grid.Column="1" Grid.Row="1" Background="{StaticResource BorderBetweenScrollBarsBackground}" />
+
+                                    <ScrollBar x:Name="HorizontalScrollBar" Height="16" IsTabStop="False"									
+                                Grid.Column="0" Grid.Row="1" Orientation="Horizontal"
+                                Minimum="0" telerik:StyleManager.Theme="{StaticResource Theme}"/>
+
+                                    <ScrollBar x:Name="VerticalScrollBar" Width="16" IsTabStop="False"
+                                    Grid.Column="1" Grid.Row="0" Orientation="Vertical"
+                                    Minimum="0" telerik:StyleManager.Theme="{StaticResource Theme}" />
+
+                                    <Grid x:Name="PrintingScreen" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="{StaticResource PrintingScreenGridBackground}" Visibility="Collapsed">
+                                        <TextBlock Text="Printing..." HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Border>
+                        <Border x:Name="DisabledVisualElement" Background="{StaticResource DisabledVisualElementBorderBackground}" 
+                                BorderBrush="{StaticResource DisabledVisualElementBorderBorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" Opacity="0" IsHitTestVisible="False"/>
+
+                        <Border x:Name="FocusVisualElement" BorderBrush="{StaticResource FocusVisualElementBorderBorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Opacity="0"  IsHitTestVisible="False"/>
+
+                        <Border x:Name="ValidationErrorElement" BorderThickness="1" CornerRadius="1" BorderBrush="{StaticResource ValidationErrorElementBorderBorderBrush}" Visibility="Collapsed">
+                            
+                        </Border>
+                    </Grid>
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsMouseOverItem">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="MouseOverBorder" 
+                                                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" 
+                                                        To="{StaticResource MouseOverBorderBorderBrush_MouseOver}" Duration="0"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="IsMouseOverItem" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsFocusedItem">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="FocusVisualElement" 
+                                                         Storyboard.TargetProperty="Opacity" 
+                                                         To="1" Duration="0"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="IsFocusedItem" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsEnabledItem">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="DisabledVisualElement" 
+                                                         Storyboard.TargetProperty="Opacity" 
+                                                         To="1" Duration="0"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="IsEnabledItem" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="HasValidationErrors" Value="False">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsValidItem">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ValidationErrorElement" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="IsValidItem" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="IsInPagedLayoutMode" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsInPagedLayoutModeItem">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="MouseOverBorder" Storyboard.TargetProperty="(Border.BorderThickness)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>0</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Border" Storyboard.TargetProperty="(Border.BorderThickness)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>0</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="FocusVisualElement" Storyboard.TargetProperty="(Border.BorderThickness)">
+                                            <DiscreteObjectKeyFrame KeyTime="00:00:00">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>0</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="IsInPagedLayoutModeItem" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--End RadRichTextBox-->
+
+    <!--Validation ToolTip-->
+
+    <!--End Validation ToolTip-->
+
+    <!-- Page -->
+    <Style TargetType="telerikUI:Page"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:Page}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:Page">
+                    <Grid>
+                        <Border Padding="0" BorderThickness="1" BorderBrush="{StaticResource GridBorderBorderbrush}" Margin="-1" 
+                                Background="{StaticResource GridBorderBackground}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                                Effect="{StaticResource DropShadowEffect}">
+                        </Border>
+                        <Canvas x:Name="PageContentPresenter" Background="{StaticResource PageContentPresenterBackground}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+    </Style>
+    <!--End Page-->
+
+    <!-- HeaderFooterPresenterBase -->
+    <Style TargetType="telerikUI:HeaderFooterPresenterBase"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:HeaderFooterPresenterBase}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:HeaderFooterPresenterBase">
+                    <Grid>
+                        <StackPanel x:Name="WrappingStackPanel">
+                            <telerikControls:RadRichTextBox x:Name="BodyRichTextBox" 
+                                    AllowScaling="False"
+                                    BorderThickness="0"
+                                    Background="Transparent"
+                                    Margin="0"
+                                    Padding="0"
+                                    MouseOverBorderThickness="0"/>
+                        </StackPanel>
+                        <!-- TODO: Extract Fill to brushes. -->
+                        <Rectangle x:Name="FadingRectangle" Fill="#80FFFFFF" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--End HeaderFooterPresenterBase-->
+
+    <Style x:Key="HeaderFooterEditModeOverlayDashedLine" TargetType="Line">
+        <!-- TODO Extract to Brushes.xml -->
+        <Setter Property="Stroke" Value="#FF9BBBE3"/>
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="X2" Value="100"/>
+        <Setter Property="Stretch" Value="UniformToFill"/>
+    </Style>
+
+    <Style x:Key="HeaderFooterEditModeOverlayTextBorderStyle" TargetType="Border">
+        <Setter Property="Margin" Value="20,0,0,0"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <!-- TODO Extract to Brushes.xml -->
+        <Setter Property="Background" Value="#FFD8E8F5"/>
+        <!-- TODO Extract to Brushes.xml -->
+        <Setter Property="BorderBrush" Value="#FF9BBBE3"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Padding" Value="4,2"/>
+    </Style>
+
+    <Style x:Key="HeaderFooterEditModeOverlayTextBoxStyle" TargetType="TextBlock">
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="FontFamily" Value="Arial"/>
+        <Setter Property="FontStyle" Value="Normal"/>
+        <Setter Property="FontSize" Value="11"/>
+        <!-- TODO Extract to Brushes.xml -->
+        <Setter Property="Foreground" Value="#FF3D428B"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- HeaderFooterEditModeOverlay -->
+    <Style TargetType="telerikUI:HeaderFooterEditModeOverlay"
+        
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:HeaderFooterEditModeOverlay}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:HeaderFooterEditModeOverlay">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <Line Style="{StaticResource HeaderFooterEditModeOverlayDashedLine}" StrokeDashArray="3 2" />
+
+                        <!-- TODO Extract to Brushes.xml -->
+                        <Rectangle Grid.Row="1" Grid.RowSpan="3" Fill="#80FFFFFF" />
+
+                        <Border Grid.Row="1" Style="{StaticResource HeaderFooterEditModeOverlayTextBorderStyle}" CornerRadius="0,0,4,4" >
+                            <TextBlock Style="{StaticResource HeaderFooterEditModeOverlayTextBoxStyle}" Text="{TemplateBinding HeaderText}" />
+                        </Border>
+
+                        <Border Grid.Row="3" Style="{StaticResource HeaderFooterEditModeOverlayTextBorderStyle}" CornerRadius="4,4,0,0">
+                            <TextBlock Style="{StaticResource HeaderFooterEditModeOverlayTextBoxStyle}"  Text="{TemplateBinding FooterText}" />
+                        </Border>
+
+                        <Line Grid.Row="4" Style="{StaticResource HeaderFooterEditModeOverlayDashedLine}" StrokeDashArray="3 2" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- End HeaderFooterEditModeOverlay -->
+        
+    <!-- WebLayoutUi-->
+    <Style TargetType="telerikUI:WebLayoutUI"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:WebLayoutUI}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:WebLayoutUI">
+                    <Grid>
+                        <Canvas x:Name="PageContentPresenter" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+    </Style>
+    <!--End Page-->
+
+    <!--<Style TargetType="telerikUI:Caret">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:Caret">
+                    <Grid x:Name="RootElement">
+                        <ScrollViewer x:Name="PART_ContentHost"
+                                      BorderThickness="0" Padding="0" />                   
+                        <Rectangle x:Name="Rectangle" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="AcceptsReturn" Value="True" />
+        <Setter Property="Padding" Value="-3 0 0 0" />
+        <Setter Property="Foreground" Value="Transparent" />
+    </Style>-->
+
+    <Style TargetType="telerikUI:DocumentPrintLayoutPresenter"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:DocumentPrintLayoutPresenter}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:DocumentPrintLayoutPresenter">
+                    <Border Background="{StaticResource RichTextBoxBackground}">
+                        <Grid>
+                            <ContentPresenter />
+                            <telerikUI:DropPositionMarker x:Name="DropPositionMarker"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="telerikUI:DocumentWebLayoutPresenter"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:DocumentWebLayoutPresenter}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:DocumentWebLayoutPresenter">
+                    <Border Background="Transparent">                       
+                        <Grid>
+                            <ContentPresenter />
+                            <telerikUI:DropPositionMarker x:Name="DropPositionMarker"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="telerikControls:RadRichTextPageView"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikControls:RadRichTextPageView}"
+         >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikControls:RadRichTextPageView">
+                    <Border Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                        <view:RichTextPageViewPresenter x:Name="PagePresenter" >
+                        </view:RichTextPageViewPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="telerikUI:DropPositionMarker"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUI:DropPositionMarker}"
+         >
+        <Setter Property="Width" Value="1" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUI:DropPositionMarker">
+                    <Rectangle Fill="{StaticResource DropPositionMarkerControlTemplateRectangleFill}" 
+                               HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="telerikUIAnotations:CommentBalloon"
+           
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUIAnotations:CommentBalloon}"
+         >
+        <Setter Property="BorderBrush" Value="{StaticResource CommentBalloonBorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="{StaticResource CommentBalloonBackground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUIAnotations:CommentBalloon">
+                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="6,6,6,6" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <telerikControls:RadRichTextBox x:Name="CommentRichTextBox" 
+                                BorderThickness="0"
+                                Background="Transparent"
+                                IsSpellCheckingEnabled="false" 
+                                IsContextMenuEnabled="false" 
+                                IsSelectionMiniToolBarEnabled="false" 
+                                Margin="2.5, 0, 2.5, 0"
+                                AllowScaling="False"
+                                Padding="0"
+                                MouseOverBorderThickness="0"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="telerikUIAnotations:CommentsPane"
+        
+        x:Key="{telerik:ThemeResourceKey ThemeType=
+        telerik:Office_BlackTheme , ElementType=telerikUIAnotations:CommentsPane}"
+         >
+        <Setter Property="BorderBrush" Value="{StaticResource CommentPane_BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1 0 0 0" />
+        <Setter Property="Background" Value="{StaticResource CommentPane_Background}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerikUIAnotations:CommentsPane">
+                    <Grid x:Name="LayoutRoot">
+                        
+
+                        <Border x:Name ="MouseOverBorder"
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}">
+                        </Border>
+                    </Grid>
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseIndirectlyOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard x:Name="IsMouseOverItem">
+                                    <Storyboard>
+                                        <ColorAnimation Duration="0" To="{StaticResource CommentPane_Background_MouseOver}" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" Storyboard.TargetName="MouseOverBorder"/>
+                                        <ColorAnimation Duration="0" To="{StaticResource CommentPane_BorderBrush_MouseOver}" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="MouseOverBorder"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="IsMouseOverItem" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    
+</ResourceDictionary>

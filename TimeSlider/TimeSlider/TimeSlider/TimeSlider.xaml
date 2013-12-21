@@ -1,0 +1,35 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:RobControls"
+	mc:Ignorable="d"
+	x:Class="RobControls.TimeSlider"
+	x:Name="UserControl"
+	d:DesignWidth="720" d:DesignHeight="46">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="BKSliderStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <local:BKSlider Height="33" Maximum="{Binding ElementName=BKS, Path=Length}" Value="{Binding ElementName=BKS, Path=currentTime}" VerticalAlignment="Top" TickPlacement="BottomRight" Style="{DynamicResource BKSliderStyle}" TickFrequency="5" ValueChanged="BKSlider_ValueChanged"/>
+        <Grid x:Name="TimeHolder" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Center">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="10" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width="24" />
+			</Grid.ColumnDefinitions>
+			<TextBox Grid.Column="0" x:Name="currentTimeBox" HorizontalAlignment="Right" Text="{Binding ElementName=UserControl, Path=currentTime}" Background="{x:Null}" BorderThickness="0" Margin="0,0,2,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="13.333" />
+			<TextBox Grid.Column="1" HorizontalAlignment="Center" Text="/" Background="{x:Null}" BorderThickness="0" VerticalAlignment="Center" FontFamily="Arial Black" FontSize="13.333" />
+            <TextBox Grid.Column="2" x:Name="totalTimeBox" HorizontalAlignment="Left" Text="{Binding ElementName=UserControl, Path=Length}" Background="{x:Null}" BorderThickness="0" Margin="2,0,0,0" VerticalAlignment="Center" FontFamily="Arial" FontSize="13.333" />
+			<Image Grid.Column="3" Source="clock.png" Width="16" Height="16" Margin="3,0,0,2"/>
+		</Grid>
+		
+	</Grid>
+</UserControl>

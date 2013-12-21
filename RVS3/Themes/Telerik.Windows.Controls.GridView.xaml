@@ -1,0 +1,49 @@
+<ResourceDictionary
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewToggleButton.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/ChildDataControlsPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/DataCellsPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/DetailsPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/DistinctFilterControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/FilteringControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/DraggedElement.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/FrozenColumnsSplitter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewAggregateResultCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewDataControl.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewFilteringDropDown.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewFooterCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewFooterIndentCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewFooterRow.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupFooterCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupFooterIndentCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupFooterRow.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupPanel.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupPanelCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupPanelItem.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewGroupRow.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewHeaderCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewHeaderIndentCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewHeaderRow.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewIndentCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewIndicatorCell.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewLoadingIndicator.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewNewRow.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewRow.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewScrollViewer.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/IndentPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/IndicatorPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/RadGridView.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/ScrollPositionIndicator.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewEditorPresenter.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/AggregateResultsList.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/LookupElement.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/GridViewCheckBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/RadTreeListView.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;component/themes/windows7/TreeListViewRow.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

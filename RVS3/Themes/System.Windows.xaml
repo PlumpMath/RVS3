@@ -1,0 +1,17 @@
+<ResourceDictionary
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.Button.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.ScrollViewer.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.CheckBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.TextBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.RadioButton.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.ListBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.PasswordBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.RepeatButton.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/System.Windows.ToolTip.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

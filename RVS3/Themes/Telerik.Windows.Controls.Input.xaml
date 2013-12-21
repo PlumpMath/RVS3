@@ -1,0 +1,16 @@
+<ResourceDictionary
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/ComboBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/NumericUpDown.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/ColorPicker.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/MaskedTextBox.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/DateTimePicker.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Rating.xaml" />
+        
+        <ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/MaskedInput.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

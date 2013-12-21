@@ -1,0 +1,13 @@
+<ResourceDictionary
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Map.xaml" />
+		<ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/Sparklines.xaml" />
+        <ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/BulletGraph.xaml" />
+        <ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/TimeBar.xaml" />
+        <ResourceDictionary Source="/Telerik.Windows.Themes.Windows7;Component/Themes/Windows7/TreeMap.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

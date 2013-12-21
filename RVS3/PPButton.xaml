@@ -1,0 +1,55 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Classic">
+	<Style x:Key="ButtonFocusVisual">
+		<Setter Property="Control.Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border>
+						<Rectangle Margin="4" SnapsToDevicePixels="true" Stroke="Black" StrokeThickness="1" StrokeDashArray="1 2"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!-- Resource dictionary entries should be defined here. -->
+	<Style x:Key="PPStyle" TargetType="{x:Type ToggleButton}">
+		<Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}"/>
+		<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+		<Setter Property="BorderBrush" Value="{x:Static Microsoft_Windows_Themes:ClassicBorderDecorator.ClassicBorderBrush}"/>
+		<Setter Property="HorizontalContentAlignment" Value="Center"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="Padding" Value="0,0,1,1"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ToggleButton}">
+					<Grid>
+						<Grid x:Name="play" Visibility="Visible" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center" Width="26">
+							<Image Height="26" Width="26" Source="play.png" />
+						</Grid>
+						<Grid x:Name="pause" Visibility="Hidden" Height="26" VerticalAlignment="Center" HorizontalAlignment="Center" Width="26">
+							<Image Height="26" Width="26" Source="pause.png" />
+						</Grid>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsKeyboardFocused" Value="false"/>
+						<Trigger Property="IsPressed" Value="true"/>
+						<Trigger Property="ToggleButton.IsChecked" Value="true">
+							<Setter Property="Visibility" TargetName="play" Value="Hidden" />
+							<Setter Property="Visibility" TargetName="pause" Value="Visible" />
+						</Trigger>
+						<Trigger Property="ToggleButton.IsChecked" Value="false">
+							<Setter Property="Visibility" TargetName="play" Value="Visible" />
+							<Setter Property="Visibility" TargetName="pause" Value="Hidden" />
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>
